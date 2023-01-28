@@ -6,6 +6,7 @@ public class Main {
         task2();
         task3();
         task4();
+
     }
     // Объявить метод «сгенерироватьМассив»
     public static int[] generateRandomArray() {
@@ -28,44 +29,37 @@ public class Main {
         }
         System.out.println();
     }
-    public static void task2() {
+    public static void task2(){
         int[] arr = generateRandomArray();
-        // int[] arr — объявление массива
-        // generateRandomArray() — вызов метода «сгенерироватьМассив»
-        int[] arr2 = new int[30];
-        int max = 99999;
-        int min =0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i] ;
+        int max=arr[0];
+        int min=arr[0];
 
+        for (int i :arr){
+            if(max<i){
+                max=i;
             }
         }
-            System.out.print(max);
 
+        for (int i : arr ){
+            if (min>i){
+                min=i;
+            }
+        }
 
-
-
+        System.out.println("Минемальная сумма трат за день состовляет "+min+ " рублей. Максимальная сумма трат за день "+max+ " рублей.");
         System.out.println();
+
+
     }
     public static void task3(){
         int[] arr = generateRandomArray();
-        // int[] arr — объявление массива
-        // generateRandomArray() — вызов метода «сгенерироватьМассив»
-        int[] arr2 = new int[30];
-        int max = 99999;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i]*30 ;
-            }
+        int sum=0;
+        for (int i :arr){
+            sum=i*30;
         }
-        System.out.print(max);
-        System.out.println();
-
+        System.out.println("Средняя сумма трпт за месяц "+sum);
 
     }
-
-
     public static void task4() {
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         System.out.println("Начальный массив:" + Arrays.toString(reverseFullName));
@@ -74,14 +68,11 @@ public class Main {
         for (int i = reverseFullName.length - 1; i >=0 ; --i) {
             System.out.print(reverseFullName[i]);
 
-            }
-
         }
 
-        }
+    }
 
-
-
+}
 
 
 
