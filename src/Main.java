@@ -55,9 +55,9 @@ public class Main {
         int[] arr = generateRandomArray();
         int sum=0;
         for (int i :arr){
-            sum=i*30;
+            sum+=i;
         }
-        System.out.println("Средняя сумма трпт за месяц "+sum);
+        System.out.println("Средняя сумма трпт за месяц "+sum*1.0/30);
 
     }
     public static void task4() {
